@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteccion y Correcion de Errores</title>
+
+    <style>
+        section {
+            margin: 20px auto;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Deteccion y Correccion de Errores</h1> 
+    <section>
+        <h2>Datos generales:</h2>
+        <p>Informacion ingresada en bits: <span id="o-info-b"></span></p>
+        <p>Informacion ingresada en decimal: <span id="o-info-d"></span></p>
+        <p>M (cantidad de bits de informacion): <span id="o-m"></span></p>
+        <p>B (cantidad de bits de control): <span id="o-b"></span></p>
+        <p>N (cantidad total de bits de palabra de codigo): <span id="o-n"></span></p>
+
+        <p>El numero binario es: <span id="o-odd-or-even"></span></p>
+    </section>
+
+    <section>
+        <article>
+            <h2>Para codificar usando Codigo Hamming</h2>
+            <label for="i-bin-ham-encode">Ingrese un numero binario:</label>
+            <input type="text" name="" id="i-bin-ham-encode" class="i-bin">
+            <button id="btn-calc-ham-encode">Calcular codigo</button>
+
+            <h3>
+                Palabra de Codigo (PC) resultante:
+                <span id="o-encode-h"></span>
+            </h3> 
+        </article>
+        <br>
+        <article>
+            <h2>Para decodificar usando Codigo Hamming</h2>
+            <label for="i-bin-ham-decode">Ingrese una PC:</label>
+            <input type="text" name="" id="i-bin-ham-decode" class="i-bin">
+            <button id="btn-calc-ham-decode">Calcular codigo</button>
+
+            <h3>
+                <span id="o-decode-h"></span>
+            </h3>
+        </article>        
+    </section>
+
+    <br>
+    <br>
+
+    <section>
+        <article>
+            <h2>Para codificar usando CRC</h2>
+            <label for="i-bin-cyclic-encode">Ingrese un numero binario:</label>
+            <input type="text" name="" id="i-bin-cyclic-encode" class="i-bin">
+            <label for="i-gen-poli">Ingrese el polinomio generador:</label>
+            <input type="text" name="" id="i-gen-poli" class="i-bin">
+            <button id="btn-calc-cyclic-encode">Calcular codigo</button>   
+
+            <h3>
+                Palabra de Codigo resultante:
+                <span id="o-encode-c"></span>
+            </h3> 
+        </article>
+        <br>
+        <article>
+            <h2>Para decodificar usando CRC</h2>
+            <label for="i-bin-cyclic-decode">Ingrese una PC:</label>
+            <input type="text" name="" id="i-bin-cyclic-decode" class="i-bin">
+            <button id="btn-calc-cyclic-decode">Calcular codigo</button>
+
+            <h3>
+                <span id="o-decode-c"></span>
+            </h3>
+        </article>
+    </section>
+
+
+   <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
